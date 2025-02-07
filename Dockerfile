@@ -2,8 +2,8 @@ FROM ubuntu:16.04
 RUN apt-get update && \
     apt-get -y install build-essential golang mercurial openssl git
 
-ARG NGROK_SERVER_DOMAIN
-ARG NGROK_SERVER_PORT=4443
+ARG NGROK_SERVER_DOMAIN=ngrok.lacorte.dev
+ARG NGROK_SERVER_PORT=443
 
 ENV NGROK_SERVER_DOMAIN=${NGROK_SERVER_DOMAIN} \
     NGROK_SERVER_PORT=${NGROK_SERVER_PORT}
